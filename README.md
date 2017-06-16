@@ -1,0 +1,2 @@
+# geo
+Geometric sequence generator
