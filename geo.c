@@ -26,16 +26,16 @@ int main(int argc, char *argv[])
 
         if (argc == 1 || argc > 4)
         {
-                printf("Usage : %s start_number end_number power[optional:default=2]\n", argv[0]);
-                printf("All numbers must be positive and power must not be one.\n");
+                printf("Usage : %s start_number end_number ratio [optional:default=2]\n", argv[0]);
+                printf("All numbers must be positive and ratio must not be one.\n");
                 return 1;
         }
         for (i=1; i < argc; i++)
         {
                 if ( !check_digit(argv[i]) )
                 {
-                        printf("Usage : %s start_number end_number power[optional:default=2]\n", argv[0]);
-                        printf("All numbers must be positive and power must not be one.\n");
+                        printf("Usage : %s start_number end_number ratio [optional:default=2]\n", argv[0]);
+                        printf("All numbers must be positive and ratio must not be one.\n");
                         return 1;
                 }
         }
@@ -53,12 +53,12 @@ int main(int argc, char *argv[])
 
         if ( (nn[0] <= 0.0) || (nn[1] <= 0.0) || (nn[2] <= 0.0) || (nn[2] == 1.0) )
         {
-                printf("All numbers must be positive and power must not be one.\n");
+                printf("All numbers must be positive and ratio must not be one.\n");
                 return 1;
         }
         if ( (nn[2] > 1.0 && nn[0] > nn[1]) || (nn[2] < 1.0 && nn[0] < nn[1]) )
         {
-                printf("start_number must be larger/smaller than end_number if power is smaller/larger than one.\n");
+                printf("start_number must be larger/smaller than end_number if ratio is smaller/larger than one.\n");
                 return 1;
         }
 
