@@ -1,5 +1,7 @@
 # geo
-Geometric sequence generator
+Geometric sequence generator for floating numbers or arbitrary integer numbers using GMP (GNU Multiple Precision Arithmetic Library). For arbitrary number arithmetic, it uses GMP (https://gmplib.org/).
+
+Just compile with 'gcc -I/path/to/GMP/include -L/path/to/GMP/lib -lgmp geo.c -o geo'.
 
 Sample output is:
 
@@ -8,3 +10,7 @@ Sample output is:
     1 2 4 8 16 32 64 128 256 512 1024
     $ geo 1024 1 0.5
     1024 512 256 128 64 32 16 8 4 2 1
+    $ geo 1 10 1.2
+    1 1.2 1.4399999999999999 1.728 2.0735999999999999 2.4883199999999999 2.9859839999999997 3.5831807999999996 4.2998169599999994 5.1597803519999994 6.1917364223999991 7.4300837068799988 8.9161004482559978
+    $ geo 7328973127 3278907128907312083721083712 739
+    7328973127 5416111140853 4002506133090367 2957852032353781213 2185852651909444316407 1615345109761079349824773 1193740036113437639520507247
